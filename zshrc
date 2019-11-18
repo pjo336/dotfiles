@@ -109,10 +109,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="cd ~/workspace"
 alias emulator="cd ~/Library/Android/sdk/tools && ./emulator -avd Nexus_5X_API_23"
-alias vim="/usr/local/bin/vim"
+alias vim="nvim"
 alias dt="cd ~/workspace/pjo336-software/digestrack.com"
 alias haptuit="cd ~/workspace/haptuit/haptuit"
 alias dc="docker-compose"
+
 #alias alfred="docker run -v $PWD:$PWD -w $PWD kcmerrill/alfred"
 #alias algred="./$GOPATH/src/github.com/kcmerrill/alfred/alfred"
 
@@ -121,3 +122,4 @@ alias dc="docker-compose"
 eval "$(fnm env --multi)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
