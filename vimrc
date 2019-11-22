@@ -34,6 +34,8 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-commentary'
 Plugin 'jremmen/vim-ripgrep'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-endwise'
 
 " Color schemes
 Plugin 'colepeters/spacemacs-theme.vim'
@@ -59,6 +61,8 @@ Plugin 'tpope/vim-rails'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+let NERDTreeShowHidden=1
+let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
@@ -78,10 +82,7 @@ hi Comment cterm=italic
 let g:airline#extensions#ale#enabled = 1
 
 " Cursor options
-" let &t_SI = "\<esc>[5 q purple\x7"  " blinking I-beam in insert mode
-" let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
-" let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SI = "\<esc>[5 q\x7"  " blinking I-beam in insert mode
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " set esckeys
@@ -111,3 +112,4 @@ let g:ruby_indent_access_modifier_style = 'normal'
 let g:ruby_indent_assignment_style = 'variable'
 let g:ruby_indent_block_style = 'do'
 
+set tags=tags
